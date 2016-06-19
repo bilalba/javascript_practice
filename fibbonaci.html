@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function fib(a) {
+	var b = 0;
+	var c = 1;
+	var d;
+	for(i =0; i < a; i++) {
+		d = c;
+		c =c +b;
+		b = d;
+	}
+	return c;	
+};
+
+
+function fibs(a) {
+	if (a == 1)
+		return 1;
+	if (a == 0)
+		return 0;
+	return fibs(a-2) + fibs(a-1);
+};
+// also 
+
+</script>
+</head>
+<body>
+
+<h1>Nth Fibbonaci Value</h1>
+<p id="a">Enter n:</p>
+<input type="number" id = "b" name = "fib">
+
+<!-- </input> -->
+<button type="button" onclick="document.getElementById('a').innerHTML = fibs(document.getElementById('b').value)">Try it
+</button>
+
+</body>
+</html>
